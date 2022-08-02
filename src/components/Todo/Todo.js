@@ -1,19 +1,19 @@
 import React from 'react';
 import styled from 'styled-components';
-import {deleteTodo, doneTodo} from '../../redux/actions/todo_action';
 import {useDispatch} from 'react-redux';
 import {useNavigate} from 'react-router-dom';
+import {todoAction} from '../../redux/features/todoSlice';
 
 const Todo = ({id, title, desc, isDone}) => {
   const navigate = useNavigate();
   const dispatch = useDispatch();
 
   const handleDelete = (id) => {
-    dispatch(deleteTodo(id));
+    dispatch(todoAction.deleteTodo(id));
   };
 
   const handleCompleted = (id) => {
-    dispatch(doneTodo(id));
+    dispatch(todoAction.doneTodo(id));
   };
 
   return (

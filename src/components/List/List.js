@@ -2,12 +2,12 @@ import React from 'react';
 import styled from 'styled-components';
 import Todo from '../Todo/Todo';
 
-const List = ({reduxTodolist}) => {
+const List = ({reduxToolkitTodolist}) => {
   return (
     <Container>
       <Heading>Working..🔥</Heading>
       <ListBox>
-        {reduxTodolist.map((data) =>
+        {reduxToolkitTodolist.map((data) =>
           data.isDone === false ? (
             <Todo
               key={data.id}
@@ -21,7 +21,7 @@ const List = ({reduxTodolist}) => {
       </ListBox>
       <Heading>Done..! ✨</Heading>
       <ListBox>
-        {reduxTodolist.map((data) =>
+        {reduxToolkitTodolist.map((data) =>
           data.isDone === true ? (
             <Todo
               key={data.id}

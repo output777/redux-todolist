@@ -4,11 +4,11 @@ import Header from '../Header/Header';
 import Layout from '../Layout/Layout';
 import List from '../List/List';
 import {useSelector, useDispatch} from 'react-redux';
-import {addTodo} from '../../redux/actions/todo_action';
+import {todoAction} from '../../redux/features/todoSlice';
 
 const Todolist = () => {
   const dispatch = useDispatch();
-  const reduxTodolist = useSelector((state) => state.todo);
+  const reduxToolkitTodolist = useSelector((state) => state.todo.todos);
   const [title, setTitle] = useState('');
   const [desc, setDesc] = useState('');
 
@@ -20,7 +20,7 @@ const Todolist = () => {
       desc: desc,
       isDone: false,
     };
-    dispatch(addTodo(newTodo));
+    dispatch(todoAction.addTodo(newTodo));
     setTitle('');
     setDesc('');
   };
@@ -47,7 +47,7 @@ const Todolist = () => {
           desc={desc}
           sad
         />
-        <List reduxTodolist={reduxTodolist} />
+        <List reduxToolkitTodolist={reduxToolkitTodolist} />
       </Layout>
     </div>
   );

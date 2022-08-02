@@ -6,7 +6,7 @@ import {useSelector} from 'react-redux';
 const Detail = () => {
   const param = useParams();
   const navigate = useNavigate();
-  const detailTodo = useSelector((state) => state.todo).filter(
+  const detailTodo = useSelector((state) => state.todo.todos).filter(
     (data) => data.id === parseInt(param.id)
   );
   return (
