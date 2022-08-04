@@ -4,7 +4,7 @@ import Header from '../Header/Header';
 import Layout from '../Layout/Layout';
 import List from '../List/List';
 import {useSelector, useDispatch} from 'react-redux';
-import {addTodo} from '../../redux/actions/todo_action';
+import {addTodo} from '../../redux/modules/todo_app';
 
 const Todolist = () => {
   const dispatch = useDispatch();
@@ -45,7 +45,6 @@ const Todolist = () => {
           handleDesc={handleDesc}
           title={title}
           desc={desc}
-          sad
         />
         <List reduxTodolist={reduxTodolist} />
       </Layout>

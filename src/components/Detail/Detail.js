@@ -14,7 +14,7 @@ const Detail = () => {
       <Box>
         <IdandBack>
           <p>ID: {detailTodo[0].id}</p>
-          <p onClick={() => navigate('/')}>이전으로</p>
+          <Back onClick={() => navigate('/')}>이전으로</Back>
         </IdandBack>
         <h2>{detailTodo[0].title}</h2>
         <p>{detailTodo[0].desc}</p>
@@ -44,4 +44,13 @@ const IdandBack = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
+`;
+
+const Back = styled.p`
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  width: 100px;
+  padding: 0.5rem 0.8rem;
+  text-align: center;
+  cursor: pointer;
 `;

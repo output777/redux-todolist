@@ -47,4 +47,12 @@ const Input = styled.input`
   border-radius: 20px;
 `;
 const BtnBox = styled.div``;
-const Button = styled.button``;
+const Button = styled.button`
+  padding: 0.8em 3em;
+  border-radius: 15px;
+  outline: none;
+  border: none;
+  background-color: #008080;
+  color: #fff;
+  cursor: pointer;
+`;

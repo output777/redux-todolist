@@ -1,4 +1,27 @@
-import {ADD_TODO, DELETE_TODO, DONE_TODO} from '../actions/types';
+const ADD_TODO = 'ADD_TODO';
+const DELETE_TODO = 'DELETE_TODO';
+const DONE_TODO = 'DONE_TODO';
+
+export function addTodo(todolist) {
+  return {
+    type: ADD_TODO,
+    payload: todolist,
+  };
+}
+
+export function deleteTodo(id) {
+  return {
+    type: DELETE_TODO,
+    payload: id,
+  };
+}
+
+export function doneTodo(id) {
+  return {
+    type: DONE_TODO,
+    payload: id,
+  };
+}
 
 const initialState = {
   todos: [],
